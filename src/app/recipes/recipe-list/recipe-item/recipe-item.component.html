@@ -1,0 +1,38 @@
+<a
+    style="cursor: pointer;"
+    [routerLink]="[index]"
+    class="list-group-item clearfix list-group-item-action"
+    routerLinkActive="active"
+>
+  <div class="card border-light mb-3">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img
+            src="{{ recipeItem.image}}"
+            alt="{{ recipeItem.title }}" class="img-fluid rounded-start"
+        >
+      </div>
+      <div class="col-md-8">
+        <div
+            class="card-body"
+        >
+          <h5 class="card-title">{{  recipeItem.title }}</h5>
+
+          <div
+              class="card-text" innerHTML="{{ recipeItem.summary }}" style="overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 4;
+                        -webkit-box-orient: vertical; "
+          ></div>
+          <br/>
+          <p class="card-text"><small class="text-body-secondary">Visited 3 mins ago</small></p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</a>
